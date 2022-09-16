@@ -1,0 +1,46 @@
+{{> header}}
+
+<div class="container row pt-5">
+    {{#if detail }}
+    <div class="col-12-sm col-12-md col-12-lg">
+
+
+        <h1 class="mt-3">{{detail.title}}</h1>
+
+        {{#if urlImg}}
+        <img src="{{urlImg}}" alt="Card image cap" class="img-fluid">
+        {{/if}}
+
+        <p class="mt-2">{{detail.textContent}}</p>
+        {{#if detail.byline}}
+        <p class="mt-2">By: {{detail.byline}}</p>
+        <br>
+        {{/if}}
+    </div>
+
+
+    {{else}}
+    <div class="col-12-sm col-12-md col-12-lg text-center mt-5">
+        <h1>Error :c</h1>
+        <img src="https://i.imgflip.com/4/1eearb.jpg" alt="Card image cap" class="img-fluid mt-2">
+        <p class="mt-2">Lamentablemente el recurso no pudo ser obtenido para su visualizacion, por favor da clic abajo para intentar desplegarlo.</p>
+        <a href="{{url}}" class="btn btn-primary mt-3" target="_blank">Ver recurso</a>
+    </div>
+    {{/if}}
+
+
+
+
+
+
+
+
+
+</div>
+
+<script>
+    //if {{detail}} == null
+    if ({{ content }} == "Error") {
+        window.location.href = "/";
+    }
+</script>

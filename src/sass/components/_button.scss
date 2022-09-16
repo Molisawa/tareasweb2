@@ -1,0 +1,25 @@
+@mixin btn(){
+    display: inline-block;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        transform: translateY(-3px);
+    }
+    &:active{
+        transform: translateY(1px);
+    }
+}
+
+@each $key, $value in $colors {
+  .btn-#{$key} {
+    @include btn();
+    background-color: $value;
+    color: $white;
+  }
+}

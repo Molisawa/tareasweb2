@@ -1,0 +1,5 @@
+/node_modules
+
+
+#El archivo .env lo incluyo en el proyecto para que se pueda ejecutar sin problemas
+#.env 
